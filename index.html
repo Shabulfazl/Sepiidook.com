@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>فروشگاه سپیدوک - خرازی آنلاین سپیدوک</title>
+
+    <!-- Bootstrap RTL -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="css/all.css" rel="stylesheet">
+
+    <!-- Swiper CSS (For Two-Row Carousel) -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!-- Css Custom -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="image/svg/Wool-1-100x100.webp" sizes="32x32">
+
+</head>
+
+<body>
+<!-- Header -->
+<header class="site-header mb-3">
+    <div class="container-fluid px-4 px-xl-5">
+        <!-- Top header -->
+        <div class="header-top">
+            <div class="header-inner">
+                <!-- Logo -->
+                <a href="#" class="logo-box">
+                    <!-- جایگزین موقت تا زمانی که تصویر بارگذاری شود -->
+                    <img src="image/Sepidook-Blank-4.png.webp" alt="لوگو" width="230px"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                </a>
+
+                <!-- Search -->
+                <div class="search-wrap" id="searchWrap">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="searchInput" placeholder="جستجوی محصولات..." autocomplete="off"/>
+                        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    </div>
+
+                    <!-- ===== Search Autocomplete Dropdown ===== -->
+                    <div class="search-dropdown" id="searchDropdown">
+
+                        <!-- بخش ۱: جستجوهای اخیر -->
+                        <div id="recentSearchSection">
+                            <div class="search-dropdown-header">
+                                <span>جستجوهای اخیر</span>
+                                <button type="button" class="clear-recent-btn" id="clearRecentBtn">پاک کردن</button>
+                            </div>
+                            <div class="search-tags-container" id="recentTagsContainer">
+                                <!-- تگ‌ها توسط JS تولید می‌شوند -->
+                            </div>
+                        </div>
+
+                        <!-- بخش ۲: جستجوهای پرطرفدار -->
+                        <div class="trending-search-section">
+                            <div class="search-dropdown-header">
+                                <span>جستجوهای پرطرفدار</span>
+                            </div>
+                            <div class="search-tags-container" id="trendingTagsContainer">
+                                <button type="button" class="search-tag" data-query="لیپ گلاس">لیپ گلاس</button>
+                                <button type="button" class="search-tag" data-query="ماشین لباسشویی">ماشین لباسشویی
+                                </button>
+                                <button type="button" class="search-tag" data-query="شامپو">شامپو</button>
+                                <button type="button" class="search-tag" data-query="سفید کننده">سفید کننده</button>
+                                <button type="button" class="search-tag" data-query="ریل">ریل</button>
+                                <button type="button" class="search-tag" data-query="لوازم آرایشی">لوازم آرایشی</button>
+                            </div>
+                        </div>
+
+                        <!-- بخش تصویر تبلیغاتی پایین (اختیاری - طبق تصویر شما) -->
+                        <div class="search-banner">
+                            <div class="search-banner-content">
+                                <h4>جشنواره تخفیف!</h4>
+                                <p>تا ۴۰٪ تخفیف روی محصولات</p>
+                                <a href="#" class="search-banner-btn">مشاهده</a>
+                            </div>
+                            <div class="search-banner-image">
+                                <i class="fa-solid fa-football"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="right-actions">
+                    <!-- ===== Login / User Dropdown ===== -->
+                    <div class="user-dropdown-wrapper" id="userDropdownWrapper">
+                        <!-- حالت اول: کاربر لاگین نکرده -->
+                        <button class="login-btn user-trigger" type="button" id="userTrigger"
+                                data-logged-in="false">
+                            <i class="fa-regular fa-user"></i>
+                            <span class="user-text">ورود / عضویت</span>
+                            <i class="fa-solid fa-chevron-down user-arrow"></i>
+                        </button>
+
+                        <!-- حالت دوم: کاربر لاگین کرده (پنهان در ابتدا) -->
+                        <button class="login-btn user-trigger logged-in" type="button" id="userTriggerLogged"
+                                data-logged-in="true" style="display: none;">
+                            <i class="fa-regular fa-user"></i>
+                            <span class="user-text">ابوالفضل</span>
+                            <i class="fa-solid fa-chevron-down user-arrow"></i>
+                        </button>
+
+                        <!-- ===== Dropdown Menu ===== -->
+                        <div class="user-dropdown" id="userDropdown">
+                            <div class="user-dropdown-header">
+                                <div class="user-avatar">
+                                    <i class="fa-regular fa-user"></i>
+                                </div>
+                                <div class="user-info">
+                                    <span class="user-name">ابوالفضل عزیز</span>
+                                    <span class="user-email">user@example.com</span>
+                                </div>
+                            </div>
+                            <ul class="user-dropdown-list">
+                                <li>
+                                    <a href="./register.html" class="dropdown-link">
+                                        <i class="fas fa-user-lock"></i>
+                                        <span>ورود/ثبت نام</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard.html" class="dropdown-link">
+                                        <i class="fa-regular fa-user"></i>
+                                        <span>پروفایل</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-orders.html" class="dropdown-link">
+                                        <i class="fas fa-receipt"></i>
+                                        <span>سفارش‌های من</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>علاقه‌مندی‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-link">
+                                        <i class="fas fa-gear"></i>
+                                        <span>تنظیمات حساب</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                    <a href="#" class="dropdown-link logout-link">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        <span>خروج</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ===== Cart ===== -->
+                    <div class="cart-wrap">
+                        <button class="cart-btn" type="button" id="cartTrigger">
+                            <span class="cart-icon"><i class="fa-solid fa-basket-shopping"></i></span>
+                            <span class="cart-total-price">۰ تومان</span>
+                            <span class="cart-badge" id="cartBadge">0</span>
+                            <i class="fa-solid fa-chevron-down cart-arrow"></i>
+                        </button>
+
+                        <!-- ===== Cart Dropdown ===== -->
+                        <div class="cart-dropdown" id="cartDropdown">
+                            <!-- Header -->
+                            <div class="cart-dropdown-header">
+                                <h4 class="cart-dropdown-title">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                    سبد خرید
+                                </h4>
+                                <span class="cart-item-count" id="cartItemCount">۰ آیتم</span>
+                            </div>
+
+                            <!-- Cart Items List -->
+                            <div class="cart-items-list" id="cartItemsList">
+                                <!-- آیتم‌ها به صورت داینامیک اضافه می‌شوند -->
+                            </div>
+
+                            <!-- Empty State -->
+                            <div class="cart-empty" id="cartEmpty">
+                                <div class="cart-empty-icon">
+                                    <i class="fas fa-basket-shopping"></i>
+                                </div>
+                                <p class="cart-empty-text">سبد خرید شما خالی است</p>
+                                <a href="#" class="cart-empty-link">مشاهده محصولات</a>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="cart-dropdown-footer" id="cartFooter">
+                                <div class="cart-subtotal">
+                                    <span class="subtotal-label">جمع کل</span>
+                                    <span class="subtotal-price" id="cartSubtotal">۰ تومان</span>
+                                </div>
+                                <div class="cart-actions">
+                                    <a href="#" class="cart-view-btn">مشاهده سبد خرید</a>
+                                    <a href="#" class="cart-checkout-btn">تکمیل خرید</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  BOTTOM NAV - Mobile App Style  -->
+        <div class="header-bottom">
+            <div class="nav-shell">
+                <!-- ناوبری موبایل -->
+                <nav class="mobile-nav" aria-label="Mobile navigation">
+                    <!-- آیتم ۱: خانه -->
+                    <input type="radio" name="mobileNav" id="nav-home" checked>
+                    <label for="nav-home" class="mobile-nav-item">
+                        <i class="fa-solid fa-house"></i>
+                        <span>خانه</span>
+                    </label>
+
+                    <!-- آیتم ۲: فروشگاه -->
+                    <input type="radio" name="mobileNav" id="nav-shop">
+                    <label for="nav-shop" class="mobile-nav-item">
+                        <i class="fa-solid fa-store"></i>
+                        <span>فروشگاه</span>
+                    </label>
+
+                    <!-- آیتم ۳: دسته‌بندی‌ها -->
+                    <input type="radio" name="mobileNav" id="nav-categories">
+                    <label for="nav-categories" class="mobile-nav-item" id="mobileMegaTrigger">
+                        <i class="fas fa-bars"></i>
+                        <span>دسته‌ها</span>
+                    </label>
+
+                    <!-- آیتم ۴: وبلاگ -->
+                    <input type="radio" name="mobileNav" id="nav-blog">
+                    <label for="nav-blog" class="mobile-nav-item">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span>وبلاگ</span>
+                    </label>
+
+                    <!-- آیتم ۵: بیشتر -->
+                    <input type="radio" name="mobileNav" id="nav-more">
+                    <label for="nav-more" class="mobile-nav-item">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <span>بیشتر</span>
+                    </label>
+
+                    <!-- Indicator متحرک -->
+                    <div class="nav-indicator"></div>
+                </nav>
+
+                <!-- منوی دسکتاپ (در موبایل مخفی) -->
+                <nav class="nav-menu desktop-nav" aria-label="Main navigation">
+                    <div class="nav-item-mega">
+                        <a href="#" class="nav-item-custom mega-trigger" id="megaTrigger">
+                            <i class="fa-solid fa-bars"></i>
+                            <span>دسته بندی محصولات</span>
+                            <i class="fa-solid fa-chevron-down mega-arrow"></i>
+                        </a>
+                    </div>
+                    <a href="#" class="nav-item-custom"><i class="fa-regular fa-gem"></i><span>فروشگاه</span></a>
+                    <a href="#" class="nav-item-custom"><i class="fa-solid fa-percent"></i><span>تخفیف ها</span></a>
+                    <a href="#" class="nav-item-custom"><i
+                            class="fa-regular fa-pen-to-square"></i><span>وبلاگ</span></a>
+                    <a href="#" class="nav-item-custom"><i class="fa-regular fa-user"></i><span>درباره ما</span></a>
+                    <a href="#" class="nav-item-custom"><i class="fa-solid fa-address-book"></i><span>تماس با ما</span></a>
+                </nav>
+
+                <!-- Support (desktop only) -->
+                <div class="support-box">
+                    <div class="support-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <div class="support-text">
+                        <span class="label">پشتیبانی فروش</span>
+                        <span class="phone">09369834050</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mega-menu" id="megaMenu">
+        <div class="mega-container">
+            <button class="mega-close" id="megaClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mega-flex-row">
+                <div class="mega-swiper-wrapper">
+                    <div class="swiper mega-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fa-solid fa-shirt"></i>
+                                        لباس و پوشاک</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">لباس زنانه</a></li>
+                                        <li><a href="#">لباس مردانه</a></li>
+                                        <li><a href="#">لباس کودک</a></li>
+                                        <li><a href="#">لباس مجلسی</a></li>
+                                        <li><a href="#">لباس ورزشی</a></li>
+                                        <li><a href="#">لباس کار</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fa-solid fa-scissors"></i>
+                                        لوازم خیاطی</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">نخ و سوزن</a></li>
+                                        <li><a href="#">قیچی و برش</a></li>
+                                        <li><a href="#">متر و اندازه‌گیری</a></li>
+                                        <li><a href="#">چرخ خیاطی</a></li>
+                                        <li><a href="#">لوازم گلدوزی</a></li>
+                                        <li><a href="#">پایه و میز خیاطی</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fa-regular fa-gem"></i>
+                                        زیورآلات و تزئینات</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">دستبند و گردنبند</a></li>
+                                        <li><a href="#">گوشواره و انگشتر</a></li>
+                                        <li><a href="#">سنگ‌دوزی و نگین</a></li>
+                                        <li><a href="#">کش و کلیپس مو</a></li>
+                                        <li><a href="#">دکمه و پولک</a></li>
+                                        <li><a href="#">مروارید و آب‌جواهر</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fas fa-scroll"></i> پارچه و
+                                        متریال</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">پارچه زنانه</a></li>
+                                        <li><a href="#">پارچه مردانه</a></li>
+                                        <li><a href="#">پارچه ضخیم و نخی</a></li>
+                                        <li><a href="#">پارچه حریر و نازک</a></li>
+                                        <li><a href="#">چرم و جیر</a></li>
+                                        <li><a href="#">پارچه طرح‌دار</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fa-solid fa-toolbox"></i>
+                                        ابزار و یراق</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">ابزار اندازه‌گیری</a></li>
+                                        <li><a href="#">یراق‌آلات</a></li>
+                                        <li><a href="#">زیپ و دکمه</a></li>
+                                        <li><a href="#">نخ و کاموا</a></li>
+                                        <li><a href="#">ابزار گلدوزی</a></li>
+                                        <li><a href="#">کیف و جعبه ابزار</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i
+                                            class="fa-solid fa-bag-shopping"></i> لوازم جانبی</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">کیف و کوله</a></li>
+                                        <li><a href="#">کمربند</a></li>
+                                        <li><a href="#">کلاه و شال</a></li>
+                                        <li><a href="#">دستکش</a></li>
+                                        <li><a href="#">جوراب</a></li>
+                                        <li><a href="#">لوازم آرایشی</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mega-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="mega-special-fixed">
+                    <div class="mega-special-box">
+                        <div class="mega-special-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h4 class="mega-special-title">تخفیف‌های ویژه</h4>
+                        <p class="mega-special-desc">تا ۵۰٪ تخفیف برای محصولات منتخب</p>
+                        <a href="#" class="mega-special-link">مشاهده همه <i
+                                class="fa-solid fa-chevron-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<!-- Main Content -->
+<main>
+
+    <!-- Hero Section -->
+    <div class="container py-sm-0 py-lg-4 mb-3">
+        <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+
+                <!-- ===== Slide 1 ===== -->
+                <div class="carousel-item active">
+                    <div class="hero-slide-wrapper">
+                        <div class="hero-slide-bg">
+                            <img src="image/hero/hero-1.png" alt="اسلاید اول">
+                        </div>
+                        <div class="hero-slide-content">
+                            <div class="hero-text">
+                                <h2>خرید انواع نخ با تخفیف ویژه</h2>
+                                <p>برای پارچه‌هایی که با عشق دوخته می‌شوند ...</p>
+                                <a href="#" class="hero-btn">مشاهده محصولات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== Slide 2 ===== -->
+                <div class="carousel-item">
+                    <div class="hero-slide-wrapper">
+                        <div class="hero-slide-bg">
+                            <img src="image/hero/hero-2.png" alt="اسلاید دوم">
+                        </div>
+                        <div class="hero-slide-content">
+                            <div class="hero-text">
+                                <h2>جدیدترین ابزارهای خیاطی</h2>
+                                <p>بهترین کیفیت برای کارهای هنری شما</p>
+                                <a href="#" class="hero-btn">مشاهده محصولات</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ===== Progress Bar (در پایین اسلایدر) ===== -->
+            <div class="hero-progress-bar">
+                <div class="hero-progress-track"></div>
+            </div>
+
+            <!-- ===== Controls ===== -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Category Section -->
+    <div class="container py-sm-0 py-lg-4 mb-3">
+
+        <!-- Swiper Container -->
+        <div class="swiper cat-swiper">
+            <div class="swiper-wrapper">
+
+                <!-- آیتم ۱ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-tape"></i> -->
+                        <img src="image/category/cat-1.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">زیپ و کش</span>
+                            <span class="cat-subtitle">jogging suit</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۲ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-ring"></i> -->
+                        <img src="image/category/cat-9.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">زیورآلات</span>
+                            <span class="cat-subtitle">Men's Clothes</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۳ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-shirt"></i> -->
+                        <img src="image/category/cat-2.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">طراحی لباس</span>
+                            <span class="cat-subtitle">Childrens Clothing</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۴ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-spool-of-thread"></i> -->
+                        <img src="image/category/cat-3.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">نخ و خیاطی</span>
+                            <span class="cat-subtitle">kinds of shoes</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۵ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-needle"></i> -->
+                        <img src="image/category/cat-4.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">نخ و سوزن</span>
+                            <span class="cat-subtitle">Women's Clothes</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۶ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-scissors"></i> -->
+                        <img src="image/category/cat-5.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">قیچی و برش</span>
+                            <span class="cat-subtitle">حرفه‌ای و ساده</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۷ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-pen-nib"></i> -->
+                        <img src="image/category/cat-6.png" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">خرازی هنری</span>
+                            <span class="cat-subtitle">تزئینات</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۸ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-regular fa-gem"></i> -->
+                        <img src="image/category/cat-7.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">سنگ دوزی</span>
+                            <span class="cat-subtitle">انواع نگین</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۹ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-palette"></i> -->
+                        <img src="image/category/cat-8.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">رنگ پارچه</span>
+                            <span class="cat-subtitle">اکرولیک و...</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم ۱۰ -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-box-open"></i> -->
+                        <img src="image/category/cat-10.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">بسته‌بندی</span>
+                            <span class="cat-subtitle">پاکت و جعبه</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم 11 -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-box-open"></i> -->
+                        <img src="image/category/cat-11.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">لوازم کیف</span>
+                            <span class="cat-subtitle">پاکت و جعبه</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- آیتم 12 -->
+                <div class="swiper-slide">
+                    <a href="#" class="cat-item">
+                        <!-- <i class="cat-icon fa-solid fa-box-open"></i> -->
+                        <img src="image/category/cat-12.webp" alt="" class="cat-icon">
+                        <div class="cat-text">
+                            <span class="cat-title">کارگاه ها</span>
+                            <span class="cat-subtitle">پاکت و جعبه</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Product Best-Seller Section -->
+    <div class="container py-sm-0 py-lg-4 mb-3">
+        <section class="product-section">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">
+                        <span>
+                            <i class="fa-solid fa-fire"></i>
+                            پرفـروش هـای سـپیدوک
+                        </span>
+                    <span class="section-subtitle">
+                            پرفروش ترین محصولات این ماه فروشگاه
+                        </span>
+                </h2>
+                <div class="line"></div>
+                <a href="#" class="section-link">
+                    مشاهده همه
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- ===== Product Card 1 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-1.webp" alt="دستبند مدل ND14">
+                            </div>
+                            <h3 class="product-title">نرخ دستبند مدل ND14</h3>
+                            <div class="product-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۱۲)</span>
+                            </div>
+                            <div class="product-price">
+                                ۲۵۰,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="1"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 2 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-2.webp" alt="گلدوزی عامه ای">
+                            </div>
+                            <h3 class="product-title">نرخ گلدوزی مدل عامه ای بسته ۱۰</h3>
+                            <div class="product-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۸)</span>
+                            </div>
+                            <div class="product-price">
+                                ۱۸۰,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="2"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 3 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-3.webp" alt="دکمه رایمون">
+                            </div>
+                            <h3 class="product-title">دکمه رایمون کالا مدل گل های بهار</h3>
+                            <div class="product-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۲۴)</span>
+                            </div>
+                            <div class="product-price">
+                                ۹۵,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="3"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 4 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-4.webp" alt="کش مو زنانه">
+                            </div>
+                            <h3 class="product-title">کش مو زنانه مدل چهل گیس کد</h3>
+                            <div class="product-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★☆☆</span>
+                                <span class="count">(۵)</span>
+                            </div>
+                            <div class="product-price">
+                                ۶۵,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="4"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 5 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-5.webp" alt="کلیپس مو">
+                            </div>
+                            <h3 class="product-title">کلیپس مو زنانه مدل پروانه ای</h3>
+                            <div class="product-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۱۵)</span>
+                            </div>
+                            <div class="product-price">
+                                ۴۵,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="5"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 6 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card out-of-stock">
+                            <span class="product-badge out-of-stock">ناموجود</span>
+                            <div class="product-image">
+                                <img src="image/products/p-6.webp" alt="نخ گلدوزی">
+                            </div>
+                            <h3 class="product-title">نرم‌افزار مدیریت خیاطی</h3>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۴۲)</span>
+                            </div>
+                            <div class="product-price">
+                                ۲۵۰,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" disabled style="opacity:0.5; cursor:not-allowed;">
+                                    <i class="fa-solid fa-ban"></i> ناموجود
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 7 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-7.webp" alt="نوار گلدوزی">
+                            </div>
+                            <h3 class="product-title">نرم‌افزار الگوهای دوخت</h3>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★☆☆</span>
+                                <span class="count">(۷)</span>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۹۵,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۶۶,۵۰۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۳۰%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="6"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 8 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-8.webp" alt="کارگاه گلدوزی">
+                            </div>
+                            <h3 class="product-title">نرم‌افزار طراحی پارچه</h3>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۱۹)</span>
+                            </div>
+                            <div class="product-price">
+                                ۲۴۵,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="7"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 9 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-1.webp" alt="نرم افزار">
+                            </div>
+                            <h3 class="product-title">نرم‌افزار مدیریت فروش</h3>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۳۱)</span>
+                            </div>
+                            <div class="product-price">
+                                ۳۰,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="8"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 10 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-2.webp" alt="نرم افزار">
+                            </div>
+                            <h3 class="product-title">نرم‌افزار حسابداری خیاطی</h3>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★☆☆</span>
+                                <span class="count">(۶)</span>
+                            </div>
+                            <div class="product-price">
+                                ۳۵۰,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="9"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 11 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-3.webp" alt="نرم افزار">
+                            </div>
+                            <h3 class="product-title">نرم‌افزار آموزش خیاطی</h3>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۲۲)</span>
+                            </div>
+                            <div class="product-price">
+                                ۵۰۰,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="10"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product Card 12 ===== -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-4.webp" alt="نرم افزار">
+                            </div>
+                            <h3 class="product-title">نرم‌افزار مدیریت پروژه</h3>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۱۴)</span>
+                            </div>
+                            <div class="product-price">
+                                ۵۰۰,۰۰۰ <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="11"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== دکمه مشاهده همه در انتهای کروسل ===== -->
+                    <div class="swiper-slide view-all-slide">
+                        <a href="#" class="view-all-card">
+                            <div class="view-all-icon">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </div>
+                            <span class="view-all-text">مشاهده همه</span>
+                            <span class="view-all-subtext">محصولات بیشتر</span>
+                            <span class="view-all-arrow">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Product Discount Product Section -->
+    <div class="container py-sm-0 py-lg-4 mb-3">
+        <section class="special-section">
+            <!-- Header -->
+            <div class="special-header">
+                <h2 class="special-title">
+                            <span class="title-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </span>
+                    <img src="image/svg/svgviewer-output.svg" alt="">
+                    <span class="title-badge">پیشنهاد ویژه</span>
+                </h2>
+
+                <!-- Timer -->
+                <div class="special-timer">
+                            <span class="timer-label">
+                                <i class="fa-regular fa-clock"></i>
+                                باقی‌مانده
+                            </span>
+                    <div class="timer-unit">
+                        <span class="number" id="hours">16</span>
+                        <span class="label">ساعت</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-unit">
+                        <span class="number" id="minutes">45</span>
+                        <span class="label">دقیقه</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-unit">
+                        <span class="number" id="seconds">30</span>
+                        <span class="label">ثانیه</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper special-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- ===== Product 1 ===== -->
+                    <div class="swiper-slide">
+                        <div class="special-card">
+                            <img src="image/svg/svgexport-17.svg" alt="" class="special-badge">
+                            <div class="special-image">
+                                <img src="image/products/p-2.webp" alt="دستبند مدل ND14">
+                            </div>
+                            <h3 class="special-title-text">نرخ دستبند مدل ND14</h3>
+                            <div class="special-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="special-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۱۲)</span>
+                            </div>
+                            <div class="special-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۲۵۰,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۱۵۰,۰۰۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۴۰%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="special-actions">
+                                <button class="btn-special-cart" data-id="12"><i
+                                        class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-special-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product 2 ===== -->
+                    <div class="swiper-slide">
+                        <div class="special-card">
+                            <img src="image/svg/svgexport-17.svg" alt="" class="special-badge">
+                            <div class="special-image">
+                                <img src="image/products/p-3.webp" alt="گلدوزی عامه ای">
+                            </div>
+                            <h3 class="special-title-text">نرخ گلدوزی مدل عامه ای بسته ۱۰</h3>
+                            <div class="special-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="special-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۸)</span>
+                            </div>
+                            <div class="special-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۱۸۰,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۹۰,۰۰۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۵۰%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="special-actions">
+                                <button class="btn-special-cart" data-id="13"><i
+                                        class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-special-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product 3 ===== -->
+                    <div class="swiper-slide">
+                        <div class="special-card">
+                            <img src="image/svg/svgexport-17.svg" alt="" class="special-badge">
+                            <div class="special-image">
+                                <img src="image/products/p-3.webp" alt="دکمه رایمون">
+                            </div>
+                            <h3 class="special-title-text">دکمه رایمون کالا مدل گل های بهار</h3>
+                            <div class="special-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="special-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۲۴)</span>
+                            </div>
+                            <div class="special-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۹۵,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۶۶,۵۰۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۳۰%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="special-actions">
+                                <button class="btn-special-cart" data-id="14"><i
+                                        class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-special-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product 4 ===== -->
+                    <div class="swiper-slide">
+                        <div class="special-card">
+                            <img src="image/svg/svgexport-17.svg" alt="" class="special-badge">
+                            <div class="special-image">
+                                <img src="image/products/p-4.webp" alt="کش مو زنانه">
+                            </div>
+                            <h3 class="special-title-text">کش مو زنانه مدل چهل گیس کد</h3>
+                            <div class="special-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+                            <div class="special-rating">
+                                <span class="stars">★★★☆☆</span>
+                                <span class="count">(۵)</span>
+                            </div>
+                            <div class="special-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۶۵,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۳۵,۷۵۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۴۵%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="special-actions">
+                                <button class="btn-special-cart" data-id="15"><i
+                                        class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-special-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product 5 ===== -->
+                    <div class="swiper-slide">
+                        <div class="special-card">
+                            <img src="image/svg/svgexport-17.svg" alt="" class="special-badge">
+                            <div class="special-image">
+                                <img src="image/products/p-5.webp" alt="کلیپس مو">
+                            </div>
+                            <h3 class="special-title-text">کلیپس مو زنانه مدل پروانه ای</h3>
+                            <div class="special-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="special-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۱۵)</span>
+                            </div>
+                            <div class="special-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۴۵,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۲۹,۲۵۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۳۵%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="special-actions">
+                                <button class="btn-special-cart" data-id="16"><i
+                                        class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-special-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product 6 (Out of Stock) ===== -->
+                    <div class="swiper-slide">
+                        <div class="special-card out-of-stock">
+                            <img src="image/svg/svgexport-17.svg" alt="" class="special-badge">
+                            <div class="special-image">
+                                <img src="image/products/p-6.webp" alt="نرم افزار">
+                            </div>
+                            <h3 class="special-title-text">نرم‌افزار مدیریت خیاطی</h3>
+                            <div class="special-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="special-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۴۲)</span>
+                            </div>
+                            <div class="special-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۲۵۰,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۱۰۰,۰۰۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۶۰%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="special-actions">
+                                <button class="btn-special-cart" disabled>
+                                    <i class="fa-solid fa-ban"></i> ناموجود
+                                </button>
+                                <button class="btn-special-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product 7 ===== -->
+                    <div class="swiper-slide">
+                        <div class="special-card">
+                            <img src="image/svg/svgexport-17.svg" alt="" class="special-badge">
+                            <div class="special-image">
+                                <img src="image/products/p-7.webp" alt="نرم افزار">
+                            </div>
+                            <h3 class="special-title-text">نرم‌افزار الگوهای دوخت</h3>
+                            <div class="special-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="special-rating">
+                                <span class="stars">★★★☆☆</span>
+                                <span class="count">(۷)</span>
+                            </div>
+                            <div class="special-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۷۵,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۵۶,۲۵۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۲۵%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="special-actions">
+                                <button class="btn-special-cart" data-id="17"><i
+                                        class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-special-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Product 8 ===== -->
+                    <div class="swiper-slide">
+                        <div class="special-card">
+                            <img src="image/svg/svgexport-17.svg" alt="" class="special-badge">
+                            <div class="special-image">
+                                <img src="image/products/p-8.webp" alt="نرم افزار">
+                            </div>
+                            <h3 class="special-title-text">نرم‌افزار طراحی پارچه</h3>
+                            <div class="special-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="special-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۱۹)</span>
+                            </div>
+                            <div class="special-price">
+                                <div class="price-wrapper">
+                                    <span class="old-price">۲۴۵,۰۰۰ <span class="price-unit">تومان</span></span>
+                                    <div class="new-price-wrapper">
+                                        <span class="current-price">۱۷۱,۵۰۰ <span class="price-unit">تومان</span></span>
+                                        <span class="discount-percent">۳۰%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="special-actions">
+                                <button class="btn-special-cart" data-id="18"><i
+                                        class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-special-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== دکمه مشاهده همه در انتهای کروسل ===== -->
+                    <div class="swiper-slide view-all-slide">
+                        <a href="#" class="view-all-card">
+                            <div class="view-all-icon">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </div>
+                            <span class="view-all-text">مشاهده همه</span>
+                            <span class="view-all-subtext">محصولات بیشتر</span>
+                            <span class="view-all-arrow">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- NEW Products Section -->
+    <div class="container py-sm-0 py-lg-4 mb-3">
+        <section class="new-products-section">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            جدیـدتـرین های سـپیدوک
+                        </span>
+                    <span class="section-subtitle">محصولات اخیر فروشگاه</span>
+                </h2>
+                <div class="line"></div>
+                <a href="#" class="section-link">
+                    مشاهده همه
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="tabs-navigation">
+                <button class="tab-btn active" data-tab="all">همه محصولات</button>
+                <button class="tab-btn" data-tab="ziwalet">زیورآلات</button>
+                <button class="tab-btn" data-tab="thread">نخ و سوزن</button>
+                <button class="tab-btn" data-tab="tailoring">خیاطی</button>
+            </div>
+
+            <!-- Tabs Content -->
+            <div class="tabs-content">
+                <!-- Tab: همه محصولات -->
+                <div class="tab-panel active" id="tab-all">
+                    <div class="products-grid">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-1.webp" alt="قبیحی خیاطی پین">
+                            </div>
+                            <h4 class="product-title">قبیحی خیاطی پین کد ۸ به همراه سرنخ زن</h4>
+                            <div class="product-sizes">
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                                <span>XXL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۱۲)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۲۲۵,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="19"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-2.webp" alt="نخ دستبند">
+                            </div>
+                            <h4 class="product-title">نخ دستبند مدل ND14</h4>
+                            <div class="product-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۸)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۲۵۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="20"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-3.webp" alt="نخ گلدوزی">
+                            </div>
+                            <h4 class="product-title">نخ گلدوزی مدل عامه ای بسته ۱۰ عددی</h4>
+                            <div class="product-sizes">
+                                <span>M</span>
+                                <span>S</span>
+                                <span>X</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۱۵)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۷۵,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                                <span class="price-range">-</span>
+                                <span class="current">۵۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="show-product-btn"><i class="fa-solid fa-basket-shopping"></i>
+                                    مشاهده محصول
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-4.webp" alt="دکمه رایمون">
+                            </div>
+                            <h4 class="product-title">دکمه رایمون کالا مدل گل های بهار ۲۴ عددی</h4>
+                            <div class="product-sizes">
+                                <span>M</span>
+                                <span>S</span>
+                                <span>X</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۲۰)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۲۴۵,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="22"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-5.webp" alt="کلیپس مو">
+                            </div>
+                            <h4 class="product-title">کلیپس مو زنانه مدل پروانه ای</h4>
+                            <div class="product-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۱۰)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۴۵,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="23"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-6.webp" alt="نرم افزار">
+                            </div>
+                            <h4 class="product-title">نرم‌افزار مدیریت خیاطی</h4>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۳۰)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۲۵۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="24"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: زیورآلات -->
+                <div class="tab-panel" id="tab-ziwalet">
+                    <div class="products-grid">
+                        <!-- Product 1 - زیورآلات -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-1.webp" alt="گردنبند نقره">
+                            </div>
+                            <h4 class="product-title">گردنبند نقره مدل پروانه ای</h4>
+                            <div class="product-sizes">
+                                <span>M</span>
+                                <span>L</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۱۸)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۱۸۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="25"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 - زیورآلات -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-2.webp" alt="دستبند">
+                            </div>
+                            <h4 class="product-title">دستبند نقره مدل ND14</h4>
+                            <div class="product-sizes">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>S</span>
+                                <span>XL</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۲۲)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۲۵۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="26"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 - زیورآلات -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-3.webp" alt="گوشواره">
+                            </div>
+                            <h4 class="product-title">گوشواره نگین‌دار طرح گل</h4>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۱۴)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۳۲۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="27"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: نخ و سوزن -->
+                <div class="tab-panel" id="tab-thread">
+                    <div class="products-grid">
+                        <!-- Product 1 - نخ و سوزن -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-4.webp" alt="نخ خیاطی">
+                            </div>
+                            <h4 class="product-title">نخ خیاطی کد ۴۰ بسته ۱۲ عددی</h4>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۹)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۸۵,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="28"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 - نخ و سوزن -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-5.webp" alt="سوزن خیاطی">
+                            </div>
+                            <h4 class="product-title">سوزن خیاطی مدل طلایی بسته ۱۰۰ عددی</h4>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۳۵)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۱۲۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="29"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: خیاطی -->
+                <div class="tab-panel" id="tab-tailoring">
+                    <div class="products-grid">
+                        <!-- Product 1 - خیاطی -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-6.webp" alt="قیچی خیاطی">
+                            </div>
+                            <h4 class="product-title">قیچی خیاطی حرفه‌ای کد ۲۲</h4>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۴۵)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۳۵۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="30"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 - خیاطی -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-7.webp" alt="متر خیاطی">
+                            </div>
+                            <h4 class="product-title">متر خیاطی ۱۵۰ سانتی بسته ۲ عددی</h4>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(۱۲)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۴۵,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="31"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 - خیاطی -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="image/products/p-8.webp" alt="چرخ خیاطی">
+                            </div>
+                            <h4 class="product-title">چرخ خیاطی برادر مدل JS-۵</h4>
+                            <div class="product-sizes">
+                                <span>—</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(۲۸)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current">۴,۵۰۰,۰۰۰</span>
+                                <span class="price-unit">تومان</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart" data-id="32"><i class="fa-solid fa-basket-shopping"></i>
+                                    افزودن
+                                </button>
+                                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Section -->
+    <div class="container py-sm-0 py-lg-4 mb-3">
+        <section class="about-section">
+            <div class="row g-4">
+
+                <!-- =========================================
+                LEFT COLUMN - About Content
+                ========================================= -->
+                <div class="col-lg-6">
+                    <!-- Why Us Box -->
+                    <div class="about-why-box">
+                        <h2 class="about-why-title">
+                            <img src="https://sepiidook.com/wp-content/uploads/2022/05/Wool-1-100x100.webp" alt=""
+                                 width="32px">
+                            چرا خــرازی سپــیدوک ؟
+                        </h2>
+
+                        <!-- محتوای قابل unfold -->
+                        <div class="about-why-content" id="aboutContent">
+                            <!-- بخش اول - همیشه نمایش داده می‌شود -->
+                            <div class="about-why-preview">
+                                <h3 class="about-why-sub_title">فروشگاه اینترنتی لوازم خرازی</h3>
+                                <p>اگر که به دنبال یک فروشگاه خرازی معتبر هستید، خرازی سپیدوک بهترین انتخاب شماست.
+                                    در این مجموعه می‌توانید انواع لوازم گلدوزی سپیدوک، نخ، سوزن، پازچه ، لایی و سایر
+                                    لوازم
+                                    خرازی را به‌صورت آنلاین تهیه کنید. سپیدوک با ارائه خدمات تخصصی در فروش لوازم خرازی،
+                                    خریدی آسان و مطمئن را برای مشتریان خود فراهم کرده است.</p>
+                            </div>
+
+                            <!-- بخش دوم - با کلیک نمایش داده می‌شود -->
+                            <div class="about-why-more" id="aboutMore" style="display: none;">
+                                <h3 class="about-why-sub_title">فروشگاه خرازی تهران و دسترسی آسان</h3>
+                                <p>به‌عنوان یکی از معتبرترین فروشگاه‌های خرازی تهران، خرازی سپیدوک سال‌هاست که در زمینه
+                                    عرضه لوازم خرازی تهران و انواع لوازم گلدوزی فعالیت دارد.
+                                    اگر به دنبال یک خرازی در تهران هستید که محصولات متنوع، ارسال سریع و پشتیبانی مطمئن
+                                    ارائه
+                                    دهد، فروشگاه سپیدوک انتخابی هوشمندانه برای شماست.</p>
+
+                                <h3 class="about-why-sub_title">قیمت لوازم خرازی و خرید اینترنتی</h3>
+                                <p>در فروشگاه خرازی آنلاین سپیدوک، شما می‌توانید به‌روزترین قیمت لوازم خرازی را مشاهده
+                                    کرده
+                                    و با اطمینان کامل سفارش خود را ثبت کنید.
+                                    امکان فروش لوازم خرازی اینترنتی توسط سپیدوک فراهم شده تا بدون نیاز به مراجعه حضوری،
+                                    تنها
+                                    با چند کلیک خرید خود را انجام دهید و به تنوع وسیعی از محصولات دسترسی داشته
+                                    باشید.</p>
+
+                                <h3 class="about-why-sub_title">خرید عمده اینترنتی لوازم خرازی</h3>
+                                <p>اگر صاحب کارگاه خیاطی، مزون یا فروشگاه جزئی هستید، سپیدوک شرایط ویژه‌ای برای خرید
+                                    عمده
+                                    اینترنتی لوازم خرازی در نظر گرفته است.
+                                    همچنین، با امکان فروش لوازم خرازی عمده، مجموعه‌ی سپیدوک به شما کمک می‌کند تا با
+                                    بهترین
+                                    قیمت و در سریع‌ترین زمان، اقلام مورد نیاز خود را نه تنها در تهران بلکه در سراسر کشور
+                                    تهیه کنید.</p>
+                            </div>
+                        </div>
+
+                        <!-- دکمه مشاهده بیشتر/بستن -->
+                        <button class="about-toggle-btn" id="aboutToggleBtn">
+                            <span class="toggle-text">مشاهده بیشتر</span>
+                            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- =========================================
+                RIGHT COLUMN - Accordion (FAQ)
+                ========================================= -->
+                <div class="col-lg-6">
+                    <div class="about-faq-wrapper">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item">
+                            <button class="accordion-btn active" data-target="faq1">
+                                    <span class="accordion-icon">
+                                        <i class="fa-regular fa-circle-question"></i>
+                                    </span>
+                                <span class="accordion-title">چطور میتوانم سفارش را لغو کنم؟</span>
+                                <span class="accordion-arrow">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                            </button>
+                            <div class="accordion-content active" id="faq1">
+                                <p>
+                                    توسعه‌ی اینترنت، روش‌های خرید ما را به کلی دگرگون کرده است.
+                                    منافع موجود در خرید اینترنتی هر روز، تعداد بیشتری از مردم را
+                                    وادار به تجربه‌ی آن کرده است.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 2 -->
+                        <div class="accordion-item">
+                            <button class="accordion-btn" data-target="faq2">
+                                    <span class="accordion-icon">
+                                        <i class="fa-regular fa-circle-question"></i>
+                                    </span>
+                                <span class="accordion-title">آیا میتوانم محصولات خریداری شده را مرجوع کنم؟</span>
+                                <span class="accordion-arrow">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                            </button>
+                            <div class="accordion-content" id="faq2">
+                                <p>
+                                    توسعه‌ی اینترنت، روش‌های خرید ما را به کلی دگرگون کرده است.
+                                    منافع موجود در خرید اینترنتی هر روز، تعداد بیشتری از مردم را
+                                    وادار به تجربه‌ی آن کرده است.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 3 -->
+                        <div class="accordion-item">
+                            <button class="accordion-btn" data-target="faq3">
+                                    <span class="accordion-icon">
+                                        <i class="fa-regular fa-circle-question"></i>
+                                    </span>
+                                <span class="accordion-title">درباره ما بیشتر بدانید</span>
+                                <span class="accordion-arrow">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                            </button>
+                            <div class="accordion-content" id="faq3">
+                                <p>
+                                    خرازی آنلاین یک فروشگاه تخصصی در حوزه لوازم خیاطی و صنایع دستی است.
+                                    ما با سال‌ها تجربه در این حوزه، بهترین محصولات را از برندهای معتبر
+                                    گردآوری کرده‌ایم تا شما عزیزان بتوانید با خیال راحت خرید کنید.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="container py-4 mb-3">
+        <section class="blog-section">
+
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">
+                        <span>
+                            <i class="fab fa-blogger"></i>
+                            وبلاگ
+                        </span>
+                    <span class="section-subtitle">
+                            جدیدترین مقالات فروشگاه
+                        </span>
+                </h2>
+                <div class="line"></div>
+                <a href="#" class="section-link">
+                    مشاهده همه
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </div>
+
+            <!-- Blog Content -->
+            <div class="row g-4">
+
+                <!-- =========================================
+                LEFT COLUMN - Blog List
+                ========================================= -->
+                <div class="col-lg-5 m-0">
+                    <div class="blog-list-wrapper">
+
+                        <!-- Blog Items -->
+                        <div class="blog-list">
+                            <!-- Item 1 -->
+                            <div class="blog-list-item">
+                                <a href="#" class="blog-list-link">
+                                        <span class="blog-list-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </span>
+                                    <span class="blog-list-title">ویدئوی آموزش خرید از سایت</span>
+                                </a>
+                                <div class="blog-list-meta">
+                                    <span class="blog-list-time">4:35</span>
+                                    <span class="blog-list-arrow">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </span>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="blog-list-item">
+                                <a href="#" class="blog-list-link">
+                                        <span class="blog-list-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </span>
+                                    <span class="blog-list-title">چگونه فروشنده شویم؟</span>
+                                </a>
+                                <div class="blog-list-meta">
+                                    <span class="blog-list-time">11:15</span>
+                                    <span class="blog-list-arrow">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </span>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="blog-list-item">
+                                <a href="#" class="blog-list-link">
+                                        <span class="blog-list-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </span>
+                                    <span class="blog-list-title">آموزش مرجوعی سفارش</span>
+                                </a>
+                                <div class="blog-list-meta">
+                                    <span class="blog-list-time">2:37</span>
+                                    <span class="blog-list-arrow">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </span>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="blog-list-item">
+                                <a href="#" class="blog-list-link">
+                                        <span class="blog-list-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </span>
+                                    <span class="blog-list-title">سیستم همکاری در فروش پوشاک</span>
+                                </a>
+                                <div class="blog-list-meta">
+                                    <span class="blog-list-time">7:04</span>
+                                    <span class="blog-list-arrow">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </span>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="blog-list-item">
+                                <a href="#" class="blog-list-link">
+                                        <span class="blog-list-icon">
+                                            <i class="fa-solid fa-play"></i>
+                                        </span>
+                                    <span class="blog-list-title">چگونگی رهگیری سفارشات</span>
+                                </a>
+                                <div class="blog-list-meta">
+                                    <span class="blog-list-time">6:49</span>
+                                    <span class="blog-list-arrow">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =========================================
+                RIGHT COLUMN - Blog Cards Carousel
+                ========================================= -->
+                <div class="col-lg-7">
+                    <div class="blog-carousel-wrapper">
+                        <div class="swiper blog-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- Card 1 -->
+                                <div class="swiper-slide">
+                                    <div class="blog-card">
+                                        <div class="blog-card-image">
+                                            <img src="https://halochin.ir/haberdashery/wp-content/uploads/2022/11/blog-4-new.jpg"
+                                                 alt="راهنمای ست کردن پیراهن فلانل">
+                                        </div>
+                                        <div class="blog-card-body">
+                                            <div class="blog-card-meta">
+                                                    <span class="blog-card-author">
+                                                        <i class="fa-regular fa-user"></i>
+                                                        ابزار وردپرس
+                                                    </span>
+                                                <span class="blog-card-date">
+                                                        <i class="fa-regular fa-calendar"></i>
+                                                        آذر 5, 1401
+                                                    </span>
+                                            </div>
+                                            <p class="blog-card-text">
+                                                همه‌ی ما در کمدمان تعداد زیادی لباس داریم که بعضی از آن‌ها را
+                                                بیشتر...
+                                            </p>
+                                            <div class="blog-card-divider"></div>
+                                            <a href="#" class="blog-card-link">
+                                                مطالعه مطلب
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="swiper-slide">
+                                    <div class="blog-card">
+                                        <div class="blog-card-image">
+                                            <img src="https://halochin.ir/haberdashery/wp-content/uploads/2022/10/blog-3.jpg"
+                                                 alt="۱۲ اصل مهم مد و فشن">
+                                        </div>
+                                        <div class="blog-card-body">
+                                            <div class="blog-card-meta">
+                                                    <span class="blog-card-author">
+                                                        <i class="fa-regular fa-user"></i>
+                                                        ابزار وردپرس
+                                                    </span>
+                                                <span class="blog-card-date">
+                                                        <i class="fa-regular fa-calendar"></i>
+                                                        آبان 16, 1401
+                                                    </span>
+                                            </div>
+                                            <p class="blog-card-text">
+                                                همه‌ی ما در کمدمان تعداد زیادی لباس داریم که بعضی از آن‌ها را
+                                                بیشتر...
+                                            </p>
+                                            <div class="blog-card-divider"></div>
+                                            <a href="#" class="blog-card-link">
+                                                مطالعه مطلب
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="swiper-slide">
+                                    <div class="blog-card">
+                                        <div class="blog-card-image">
+                                            <img src="https://halochin.ir/haberdashery/wp-content/uploads/2022/10/blog-2.jpg"
+                                                 alt="چگونه کت و مانتو سبز را ست کنیم">
+                                        </div>
+                                        <div class="blog-card-body">
+                                            <div class="blog-card-meta">
+                                                    <span class="blog-card-author">
+                                                        <i class="fa-regular fa-user"></i>
+                                                        ابزار وردپرس
+                                                    </span>
+                                                <span class="blog-card-date">
+                                                        <i class="fa-regular fa-calendar"></i>
+                                                        آبان 16, 1401
+                                                    </span>
+                                            </div>
+                                            <p class="blog-card-text">
+                                                همه‌ی ما در کمدمان تعداد زیادی لباس داریم که بعضی از آن‌ها را
+                                                بیشتر...
+                                            </p>
+                                            <div class="blog-card-divider"></div>
+                                            <a href="#" class="blog-card-link">
+                                                مطالعه مطلب
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4 -->
+                                <div class="swiper-slide">
+                                    <div class="blog-card">
+                                        <div class="blog-card-image">
+                                            <img src="https://halochin.ir/haberdashery/wp-content/uploads/2022/10/blog-1.jpg"
+                                                 alt="اصول ست کردن لباس های پاییزی">
+                                        </div>
+                                        <div class="blog-card-body">
+                                            <div class="blog-card-meta">
+                                                    <span class="blog-card-author">
+                                                        <i class="fa-regular fa-user"></i>
+                                                        ابزار وردپرس
+                                                    </span>
+                                                <span class="blog-card-date">
+                                                        <i class="fa-regular fa-calendar"></i>
+                                                        آبان 16, 1401
+                                                    </span>
+                                            </div>
+                                            <p class="blog-card-text">
+                                                همه‌ی ما در کمدمان تعداد زیادی لباس داریم که بعضی از آن‌ها را
+                                                بیشتر...
+                                            </p>
+                                            <div class="blog-card-divider"></div>
+                                            <a href="#" class="blog-card-link">
+                                                مطالعه مطلب
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Swiper Scrollbar -->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="blog-nav-btn blog-nav-next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="blog-nav-btn blog-nav-prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <img src="image/Sepidook-Blank-4.png.webp" alt="خرازی آنلاین" width="160px"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span style="display: none; font-size: 20px; font-weight: bold; color: var(--color-primary);">
+                            خرازی آنلاین
+                        </span>
+                </div>
+
+                <!-- Phone -->
+                <div class="footer-phone">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>09369834050</span>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="اینستاگرام">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="تلگرام">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="واتساپ">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="آپارات">
+                        <i class="fa-brands fa-aparat"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    تمامی حقوق مادی و معنوی این سایت متعلق به خرازی آنلاین می‌باشد.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div id="designer">
+        <span><a href=""> Powerd by Deigiseek</a></span>
+    </div>
+
+</main>
+
+<!-- Scripts -->
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap Bundle -->
+<script src="js/bootstrap.bundle.js"></script>
+<!-- Swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+<!-- JS Custom -->
+<script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>

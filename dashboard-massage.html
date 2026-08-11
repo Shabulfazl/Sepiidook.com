@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>فروشگاه سپیدوک - خرازی آنلاین سپیدوک</title>
+
+    <!-- Bootstrap RTL -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="css/all.css" rel="stylesheet">
+
+    <!-- Swiper CSS (For Two-Row Carousel) -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!-- Css Custom -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="image/svg/Wool-1-100x100.webp" sizes="32x32">
+
+</head>
+
+<body>
+<!-- Main Content -->
+<main>
+    <!-- =========================================
+    ORDERS PAGE - پنل کاربری
+    ========================================= -->
+    <div class="dashboard-page">
+        <div class="container py-4">
+            <div class="row g-4">
+
+                <!-- =========================================
+                SIDEBAR - منوی کاربری
+                ========================================= -->
+                <div class="col-lg-3">
+                    <!-- دسکتاپ: منوی ثابت -->
+                    <div class="dashboard-sidebar d-none d-lg-block">
+                        <div class="user-profile-card">
+                            <div class="user-profile-header">
+                                <div class="user-avatar-wrapper">
+                                    <img src="image/svg/user.png" alt="آواتار" class="user-avatar">
+                                </div>
+                                <div class="user-info">
+                                    <h4 class="user-name">ابوالفضل شکرشکن</h4>
+                                    <span class="user-phone">۰۹۱۰۰۰۰۰۰۰۱</span>
+                                </div>
+                                <button class="user-edit-btn" title="ویرایش">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </button>
+                            </div>
+
+                            <ul class="dashboard-menu">
+                                <li>
+                                    <a href="./dashboard.html">
+                                        <i class="fa-regular fa-rectangle-list"></i>
+                                        <span>داشبورد</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-orders.html">
+                                        <i class="fas fa-receipt"></i>
+                                        <span>سفارش‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-wishlist.html">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>علاقه‌مندی‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-address.html">
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>آدرس‌ها</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="./dashboard-massage.html">
+                                        <i class="fa-regular fa-bell"></i>
+                                        <span>پیام‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-account.html">
+                                        <i class="fas fa-gear"></i>
+                                        <span>اطلاعات حساب</span>
+                                    </a>
+                                </li>
+                                <li class="logout">
+                                    <a href="#">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        <span>خروج</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- موبایل: دکمه باز کردن منو -->
+                    <div class="d-lg-none mb-3">
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <i class="fa-solid fa-bars"></i>
+                            منوی کاربری
+                        </button>
+                    </div>
+
+                    <!-- موبایل: منوی کشویی -->
+                    <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+                    <div class="dashboard-sidebar mobile-sidebar" id="mobileSidebar">
+                        <div class="user-profile-card">
+                            <button class="mobile-menu-close" id="mobileMenuClose">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+
+                            <div class="user-profile-header">
+                                <div class="user-avatar-wrapper">
+                                    <img src="image/svg/user.png" alt="آواتار" class="user-avatar">
+                                </div>
+                                <div class="user-info">
+                                    <h4 class="user-name">ابوالفضل شکرشکن</h4>
+                                    <span class="user-phone">۰۹۱۰۰۰۰۰۰۰۱</span>
+                                </div>
+                                <button class="user-edit-btn" title="ویرایش">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </button>
+                            </div>
+
+                            <ul class="dashboard-menu">
+                                <li>
+                                    <a href="./dashboard.html">
+                                        <i class="fa-regular fa-rectangle-list"></i>
+                                        <span>داشبورد</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-orders.html">
+                                        <i class="fas fa-receipt"></i>
+                                        <span>سفارش‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-wishlist.html">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>علاقه‌مندی‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-address">
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>آدرس‌ها</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="./dashboard-massage.html">
+                                        <i class="fa-regular fa-bell"></i>
+                                        <span>پیام‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-account.html">
+                                        <i class="fas fa-gear"></i>
+                                        <span>اطلاعات حساب</span>
+                                    </a>
+                                </li>
+                                <li class="logout">
+                                    <a href="#">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        <span>خروج</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =========================================
+                   MAIN CONTENT - پیام‌ها
+                   ========================================= -->
+                <div class="col-lg-9">
+
+                    <!-- ===== عنوان صفحه ===== -->
+                    <div class="page-header">
+                        <h3 class="page-title">
+                            <i class="fa-regular fa-bell"></i>
+                            پیام‌های من
+                        </h3>
+                        <div class="header-actions">
+                            <span class="page-subtitle" id="messageCount">۵ پیام</span>
+                            <button class="btn-ticket" id="newTicketBtn">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                                ثبت تیکت جدید
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ===== پیام‌های مربوط به سفارش ===== -->
+                    <div class="message-section">
+                        <h4 class="section-title-custom">
+                            <i class="fas fa-bag-shopping"></i>
+                            پیام‌های سفارش
+                        </h4>
+
+                        <div class="message-list">
+
+                            <!-- ===== پیام ۱ - ارسال شده ===== -->
+                            <div class="message-item delivered">
+                                <div class="message-icon">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-title">پارسا وصالی عزیز سفارش شما با شماره پیگیری #۱۲۳۴ ارسال شد</span>
+                                        <span class="message-date">۱۴۰۲/۱۱/۱۵</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p class="message-text">سفارش شما با موفقیت ارسال شد و در مسیر تحویل قرار
+                                            دارد.</p>
+                                        <div class="message-footer">
+                                            <span class="message-status delivered">ارسال شده</span>
+                                            <a href="#" class="message-link">
+                                                پیگیری سفارش
+                                                <i class="fa-solid fa-arrow-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ===== پیام ۲ - در حال پیگیری ===== -->
+                            <div class="message-item processing">
+                                <div class="message-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-title">پارسا وصالی عزیز سفارش شما در حال پیگیری میباشد</span>
+                                        <span class="message-date">۱۴۰۲/۱۱/۱۴</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p class="message-text">سفارش شما در حال بررسی و آماده‌سازی برای ارسال است.</p>
+                                        <div class="message-footer">
+                                            <span class="message-status processing">در حال پیگیری</span>
+                                            <a href="#" class="message-link">
+                                                پیگیری سفارش
+                                                <i class="fa-solid fa-arrow-left"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ===== پیام ۳ - لغو شده ===== -->
+                            <div class="message-item canceled">
+                                <div class="message-icon">
+                                    <i class="fa-solid fa-ban"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-title">پارسا وصالی عزیز سفارش شما با شماره پیگیری #۱۲۳۲ لغو شد</span>
+                                        <span class="message-date">۱۴۰۲/۱۱/۱۳</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p class="message-text">سفارش شما به دلیل درخواست شما لغو گردید.</p>
+                                        <div class="message-footer">
+                                            <span class="message-status canceled">لغو شده</span>
+                                            <a href="#" class="message-link">
+                                                پیگیری سفارش
+                                                <i class="fa-solid fa-arrow-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ===== پیام ۴ - مرجوع شده ===== -->
+                            <div class="message-item returned">
+                                <div class="message-icon">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-title">پارسا وصالی عزیز سفارش شما با شماره پیگیری #۱۲۳۱ مرجوع شد</span>
+                                        <span class="message-date">۱۴۰۲/۱۱/۱۲</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p class="message-text">سفارش شما با موفقیت مرجوع شد و مبلغ به حساب شما بازگشت
+                                            داده خواهد شد.</p>
+                                        <div class="message-footer">
+                                            <span class="message-status returned">مرجوع شده</span>
+                                            <a href="#" class="message-link">
+                                                پیگیری سفارش
+                                                <i class="fa-solid fa-arrow-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== پیام‌های مربوط به پاسخ تیکت‌ها ===== -->
+                    <div class="message-section mt-4">
+                        <h4 class="section-title-custom">
+                            <i class="fa-regular fa-message"></i>
+                            پاسخ تیکت‌ها
+                        </h4>
+
+                        <div class="message-list">
+
+                            <!-- ===== تیکت ۱ ===== -->
+                            <div class="message-item ticket">
+                                <div class="message-icon ticket-icon">
+                                    <i class="fa-regular fa-message"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-title">پاسخ به تیکت: مشکل در پرداخت</span>
+                                        <span class="message-date">۱۴۰۲/۱۱/۱۰</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p class="message-text">با سلام، مشکل پرداخت شما بررسی شد. لطفاً مجدداً اقدام به
+                                            پرداخت کنید.</p>
+                                        <div class="message-footer">
+                                            <span class="message-status ticket">پاسخ داده شده</span>
+                                            <a href="#" class="message-link">
+                                                مشاهده تیکت
+                                                <i class="fa-solid fa-arrow-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ===== تیکت ۲ ===== -->
+                            <div class="message-item ticket">
+                                <div class="message-icon ticket-icon">
+                                    <i class="fa-regular fa-message"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-title">پاسخ به تیکت: درخواست راهنمایی</span>
+                                        <span class="message-date">۱۴۰۲/۱۱/۰۹</span>
+                                    </div>
+                                    <div class="message-body">
+                                        <p class="message-text">با سلام، راهنمایی کامل برای استفاده از محصولات در پیوست
+                                            ارسال شده است.</p>
+                                        <div class="message-footer">
+                                            <span class="message-status ticket">پاسخ داده شده</span>
+                                            <a href="#" class="message-link">
+                                                مشاهده تیکت
+                                                <i class="fa-solid fa-arrow-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== Empty State ===== -->
+                    <div class="message-empty" id="messageEmpty" style="display: none;">
+                        <div class="empty-icon">
+                            <i class="fa-regular fa-bell"></i>
+                        </div>
+                        <h4 class="empty-title">پیامی برای شما وجود ندارد</h4>
+                        <p class="empty-desc">با ثبت تیکت، پیام‌های شما در این بخش نمایش داده می‌شود</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================
+       MODAL - ثبت تیکت جدید
+       ========================================= -->
+    <div class="modal fade" id="ticketModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        ثبت تیکت جدید
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ticketForm">
+                        <div class="form-group">
+                            <label class="form-label">عنوان تیکت</label>
+                            <input type="text" class="form-input" id="ticketTitle" placeholder="موضوع تیکت را وارد کنید"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">توضیحات</label>
+                            <textarea class="form-input" id="ticketDescription" rows="4"
+                                      placeholder="مشکل خود را به طور کامل توضیح دهید..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">پیوست</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" class="file-upload-input" id="ticketAttachment" multiple>
+                                <label for="ticketAttachment" class="file-upload-label">
+                                    <i class="fas fa-paperclip"></i>
+                                    <span>انتخاب فایل</span>
+                                </label>
+                                <span class="file-upload-name" id="fileName">هیچ فایلی انتخاب نشده است</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal-cancel" data-bs-dismiss="modal">انصراف</button>
+                    <button type="button" class="btn-modal-save" id="submitTicketBtn">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        ارسال تیکت
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer Section -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="image/Sepidook-Blank-4.png.webp" alt="خرازی آنلاین" width="160px"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span style="display: none; font-size: 20px; font-weight: bold; color: var(--color-primary);">
+                        خرازی آنلاین
+                    </span>
+            </div>
+
+            <!-- Phone -->
+            <div class="footer-phone">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>09369834050</span>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+                <a href="#" class="social-link" aria-label="اینستاگرام">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="تلگرام">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="واتساپ">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="آپارات">
+                    <i class="fa-brands fa-aparat"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p class="footer-copy">
+                تمامی حقوق مادی و معنوی این سایت متعلق به خرازی آنلاین می‌باشد.
+            </p>
+        </div>
+    </div>
+</footer>
+<div id="designer">
+    <span><a href=""> Powerd by Deigiseek</a></span>
+</div>
+
+<!-- Scripts -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- JS Custom -->
+<script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>

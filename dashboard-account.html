@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>فروشگاه سپیدوک - خرازی آنلاین سپیدوک</title>
+
+    <!-- Bootstrap RTL -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="css/all.css" rel="stylesheet">
+
+    <!-- Swiper CSS (For Two-Row Carousel) -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!-- Css Custom -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="image/svg/Wool-1-100x100.webp" sizes="32x32">
+
+</head>
+
+<body>
+
+<!-- Main Content -->
+<main>
+
+    <!-- =========================================
+    ACCOUNT PAGE - پنل کاربری
+    ========================================= -->
+    <div class="dashboard-page">
+        <div class="container py-4">
+            <div class="row g-4">
+                <!-- =========================================
+                SIDEBAR - منوی کاربری
+                ========================================= -->
+                <div class="col-lg-3">
+
+                    <!-- دسکتاپ: منوی ثابت -->
+                    <div class="dashboard-sidebar d-none d-lg-block">
+                        <div class="user-profile-card">
+                            <div class="user-profile-header">
+                                <div class="user-avatar-wrapper">
+                                    <img src="image/svg/user.png" alt="آواتار" class="user-avatar">
+                                </div>
+                                <div class="user-info">
+                                    <h4 class="user-name">ابوالفضل شکرشکن</h4>
+                                    <span class="user-phone">۰۹۱۰۰۰۰۰۰۰۱</span>
+                                </div>
+                                <button class="user-edit-btn" title="ویرایش">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </button>
+                            </div>
+
+                            <ul class="dashboard-menu">
+                                <li>
+                                    <a href="./dashboard.html">
+                                        <i class="fa-regular fa-rectangle-list"></i>
+                                        <span>داشبورد</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-orders.html">
+                                        <i class="fas fa-receipt"></i>
+                                        <span>سفارش‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-wishlist.html">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>علاقه‌مندی‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-address.html">
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>آدرس‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-massage.html">
+                                        <i class="fa-regular fa-bell"></i>
+                                        <span>پیام‌ها</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="./dashboard-account.html">
+                                        <i class="fas fa-gear"></i>
+                                        <span>اطلاعات حساب</span>
+                                    </a>
+                                </li>
+                                <li class="logout">
+                                    <a href="#">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        <span>خروج</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- موبایل: دکمه باز کردن منو -->
+                    <div class="d-lg-none mb-3">
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <i class="fa-solid fa-bars"></i>
+                            منوی کاربری
+                        </button>
+                    </div>
+
+                    <!-- موبایل: منوی کشویی -->
+                    <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+                    <div class="dashboard-sidebar mobile-sidebar" id="mobileSidebar">
+                        <div class="user-profile-card">
+                            <button class="mobile-menu-close" id="mobileMenuClose">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+
+                            <div class="user-profile-header">
+                                <div class="user-avatar-wrapper">
+                                    <img src="image/svg/user.png" alt="آواتار" class="user-avatar">
+                                </div>
+                                <div class="user-info">
+                                    <h4 class="user-name">ابوالفضل شکرشکن</h4>
+                                    <span class="user-phone">۰۹۱۰۰۰۰۰۰۰۱</span>
+                                </div>
+                                <button class="user-edit-btn" title="ویرایش">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </button>
+                            </div>
+
+                            <ul class="dashboard-menu">
+                                <li>
+                                    <a href="./dashboard.html">
+                                        <i class="fa-regular fa-rectangle-list"></i>
+                                        <span>داشبورد</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-orders.html">
+                                        <i class="fas fa-receipt"></i>
+                                        <span>سفارش‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-wishlist.html">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>علاقه‌مندی‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-address.html">
+                                        <i class="fas fa-location-dot"></i>
+                                        <span>آدرس‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./dashboard-massage.html">
+                                        <i class="fa-regular fa-bell"></i>
+                                        <span>پیام‌ها</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="./dashboard-account.html">
+                                        <i class="fas fa-gear"></i>
+                                        <span>اطلاعات حساب</span>
+                                    </a>
+                                </li>
+                                <li class="logout">
+                                    <a href="#">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        <span>خروج</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- =========================================
+                MAIN CONTENT - اطلاعات حساب
+                ========================================= -->
+                <div class="col-lg-9">
+                    <!-- کارت اطلاعات کاربری -->
+                    <div class="account-info-card">
+                        <h3 class="account-info-title">اطلاعات حساب کاربری</h3>
+
+                        <form id="userInfoForm" class="row g-4">
+                            <!-- نام و نام خانوادگی -->
+                            <div class="col-md-6">
+                                <div class="account-input-group">
+                                    <label>نام و نام خانوادگی</label>
+                                    <div class="account-input-wrapper">
+                                        <input type="text" id="fullname" value="ابوالفضل شکرشکن"
+                                               disabled>
+                                        <button type="button" class="edit-icon-btn"
+                                                data-target="fullname">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- شماره موبایل -->
+                            <div class="col-md-6">
+                                <div class="account-input-group">
+                                    <label>شماره موبایل</label>
+                                    <div class="account-input-wrapper">
+                                        <input type="text" value="۰۹۱۰۰۰۰۰۰۰۱" disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ایمیل -->
+                            <div class="col-md-6">
+                                <div class="account-input-group">
+                                    <label>ایمیل</label>
+                                    <div class="account-input-wrapper">
+                                        <input type="email" id="email" value="info@example.com"
+                                               disabled>
+                                        <button type="button" class="edit-icon-btn" data-target="email">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- رمز عبور -->
+                            <div class="col-md-6">
+                                <div class="account-input-group">
+                                    <label>رمز عبور</label>
+                                    <div class="account-input-wrapper">
+                                        <input type="password" value="............" disabled>
+                                        <button type="button" class="edit-icon-btn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#changePasswordModal">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- تاریخ تولد -->
+                            <div class="col-md-6">
+                                <div class="account-input-group">
+                                    <label>تاریخ تولد</label>
+                                    <div class="account-input-wrapper">
+                                        <input type="text" value="۱۴۰۰/۱/۱" disabled>
+                                        <button type="button" class="edit-icon-btn">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- =========================================
+MODAL: تغییر رمز عبور (2 مرحله‌ای)
+========================================= -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="modalStepTitle">تغییر رمز عبور</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+
+            <!-- Step 1: OTP Verification -->
+            <div id="otpStep" class="p-4">
+                <p class="text-center text-muted small mb-3">کد تایید به شماره ۰۹۱۰۰۰۰۰۰۰۱ ارسال شد</p>
+
+                <div class="otp-container">
+                    <input type="text" maxlength="1" class="otp-input" id="otp1" autofocus>
+                    <input type="text" maxlength="1" class="otp-input" id="otp2">
+                    <input type="text" maxlength="1" class="otp-input" id="otp3">
+                    <input type="text" maxlength="1" class="otp-input" id="otp4">
+                </div>
+
+                <div id="otpError" class="text-danger text-center small mb-3 d-none">کد وارد شده صحیح
+                    نمی‌باشد.
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <button id="resendOtpBtn" class="btn btn-link text-decoration-none p-0" disabled>
+                        ارسال مجدد کد
+                    </button>
+                    <span id="otpTimer" class="text-muted small">00:30</span>
+                </div>
+
+                <button id="verifyOtpBtn" class="btn btn-primary-custom w-100">تایید کد</button>
+            </div>
+
+            <!-- Step 2: New Password Form -->
+            <div id="passwordStep" class="p-4 d-none">
+                <p class="text-center text-muted small">رمز عبور باید حداقل ۸ حرفی باشد</p>
+
+                <div class="position-relative mb-2">
+                    <input type="password" id="newPassword" class="form-control ps-5"
+                           placeholder="رمز عبور جدید"
+                           style="border-radius: 12px; padding: 0.8rem 1rem;">
+                    <i class="fa-regular fa-eye position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"
+                       style="left: 15px; cursor: pointer;"
+                       onclick="togglePassword('newPassword', this)"></i>
+                </div>
+
+                <ul class="password-requirements list-unstyled mb-3" id="passReq">
+                    <li id="reqLength"><i class="fa-regular fa-circle me-1"></i> حداقل ۸ حرف</li>
+                    <li id="reqNumber"><i class="fa-regular fa-circle me-1"></i> شامل عدد</li>
+                    <li id="reqUpper"><i class="fa-regular fa-circle me-1"></i> شامل یک حرف بزرگ</li>
+                </ul>
+
+                <div class="position-relative mb-3">
+                    <input type="password" id="confirmPassword" class="form-control ps-5"
+                           placeholder="تکرار رمز عبور *"
+                           style="border-radius: 12px; padding: 0.8rem 1rem;">
+                    <i class="fa-regular fa-eye position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"
+                       style="left: 15px; cursor: pointer;"
+                       onclick="togglePassword('confirmPassword', this)"></i>
+                </div>
+                <div id="passError" class="text-danger text-center small mb-3 d-none">رمز عبور و تکرار
+                    آن یکسان نیستند.
+                </div>
+
+                <button id="savePasswordBtn" class="btn btn-primary-custom w-100">تغییر رمز</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+
+<!-- =========================================
+FOOTER
+========================================= -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="image/Sepidook-Blank-4.png.webp" alt="خرازی آنلاین" width="160px"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span style="display: none; font-size: 20px; font-weight: bold; color: var(--color-primary);">
+                    خرازی آنلاین
+                </span>
+            </div>
+
+            <!-- Phone -->
+            <div class="footer-phone">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>۰۹۳۶۹۸۳۴۰۵۰</span>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+                <a href="#" class="social-link" aria-label="اینستاگرام">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="تلگرام">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="واتساپ">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="آپارات">
+                    <i class="fa-brands fa-aparat"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p class="footer-copy">
+                تمامی حقوق مادی و معنوی این سایت متعلق به خرازی آنلاین می‌باشد.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- =========================================
+DESIGNER CREDIT
+========================================= -->
+<div id="designer">
+    <span><a href="#"> Powerd by Deigiseek</a></span>
+</div>
+
+<!-- =========================================
+SCRIPTS
+========================================= -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- JS Custom -->
+<script src="js/scripts.js"></script>
+
+</body>
+
+</html>

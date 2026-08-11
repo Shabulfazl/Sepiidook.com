@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فروشگاه سپیدوک - خرازی آنلاین سپیدوک</title>
+
+    <!-- Bootstrap RTL -->
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="css/all.css" rel="stylesheet">
+
+    <!-- Swiper CSS (For Two-Row Carousel) -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!-- Css Custom -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="image/svg/Wool-1-100x100.webp" sizes="32x32">
+
+</head>
+
+<body>
+    <!-- Main Content -->
+    <main>
+        <!-- =========================================
+        USER DASHBOARD PAGE
+        ========================================= -->
+        <div class="dashboard-page">
+            <div class="container py-4">
+                <div class="row g-4">
+
+                    <!-- =========================================
+                    SIDEBAR - منوی کاربری
+                    ========================================= -->
+                    <div class="col-lg-3">
+                        <!-- دسکتاپ: منوی ثابت -->
+                        <div class="dashboard-sidebar d-none d-lg-block">
+                            <!-- اطلاعات کاربر -->
+                            <div class="user-profile-card">
+                                <div class="user-profile-header">
+                                    <div class="user-avatar-wrapper">
+                                        <img src="image/svg/user.png" alt="آواتار" class="user-avatar">
+                                    </div>
+                                    <div class="user-info">
+                                        <h4 class="user-name">ابوالفضل شکرشکن</h4>
+                                        <span class="user-phone">۰۹۱۰۰۰۰۰۰۰۱</span>
+                                    </div>
+                                    <button class="user-edit-btn" title="ویرایش">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </button>
+                                </div>
+
+                                <ul class="dashboard-menu">
+                                    <li class="active">
+                                        <a href="./dashboard.html">
+                                            <i class="fa-regular fa-rectangle-list"></i>
+                                            <span>داشبورد</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-orders.html">
+                                            <i class="fas fa-receipt"></i>
+                                            <span>سفارش‌ها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-wishlist.html">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>علاقه‌مندی‌ها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-address.html">
+                                            <i class="fas fa-location-dot"></i>
+                                            <span>آدرس‌ها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-massage.html">
+                                            <i class="fa-regular fa-bell"></i>
+                                            <span>پیام‌ها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-account.html">
+                                            <i class="fas fa-gear"></i>
+                                            <span>اطلاعات حساب</span>
+                                        </a>
+                                    </li>
+                                    <li class="logout">
+                                        <a href="#">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            <span>خروج</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- موبایل: دکمه باز کردن منو -->
+                        <div class="d-lg-none mb-3">
+                            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                                <i class="fa-solid fa-bars"></i>
+                                منوی کاربری
+                            </button>
+                        </div>
+
+                        <!-- موبایل: منوی کشویی -->
+                        <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+                        <div class="dashboard-sidebar mobile-sidebar" id="mobileSidebar">
+                            <div class="user-profile-card">
+                                <button class="mobile-menu-close" id="mobileMenuClose">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                                <div class="user-profile-header">
+                                    <div class="user-avatar-wrapper">
+                                        <img src="image/svg/user.png" alt="آواتار" class="user-avatar">
+                                    </div>
+                                    <div class="user-info">
+                                        <h4 class="user-name">ابوالفضل شکرشکن</h4>
+                                        <span class="user-phone">۰۹۱۰۰۰۰۰۰۰۱</span>
+                                    </div>
+                                    <button class="user-edit-btn" title="ویرایش">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </button>
+                                </div>
+
+                                <ul class="dashboard-menu">
+                                    <li class="active">
+                                        <a href="./dashboard.html">
+                                            <i class="fa-regular fa-rectangle-list"></i>
+                                            <span>داشبورد</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-orders.html">
+                                            <i class="fas fa-receipt"></i>
+                                            <span>سفارش‌ها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-wishlist.html">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>علاقه‌مندی‌ها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-address.html">
+                                            <i class="fas fa-location-dot"></i>
+                                            <span>آدرس‌ها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-massage.html">
+                                            <i class="fa-regular fa-bell"></i>
+                                            <span>پیام‌ها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./dashboard-account.html">
+                                            <i class="fas fa-gear"></i>
+                                            <span>اطلاعات حساب</span>
+                                        </a>
+                                    </li>
+                                    <li class="logout">
+                                        <a href="#">
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            <span>خروج</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================
+               MAIN CONTENT
+               ========================================= -->
+                    <div class="col-lg-9">
+
+                        <!-- ===== Stats Cards ===== -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4 col-6">
+                                <div class="stat-card">
+                                    <div class="stat-icon wallet">
+                                        <i class="fas fa-wallet"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h5 class="stat-title">کیف‌پول</h5>
+                                        <p class="stat-value">۰ تومان</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="stat-card">
+                                    <div class="stat-icon orders">
+                                        <i class="fas fa-receipt"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h5 class="stat-title">سفارش‌ها</h5>
+                                        <p class="stat-value">3 سفارش</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="stat-card">
+                                    <div class="stat-icon tickets">
+                                        <i class="fas fa-ticket"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h5 class="stat-title">تیکت‌ها</h5>
+                                        <p class="stat-value">۵ تیکت</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ===== Recent Orders ===== -->
+                        <div class="dashboard-card">
+                            <div class="card-header-custom">
+                                <span class="card-title">
+                                    <img src="image/svg/status-delivered.svg" alt="" class="card-title-icon">
+                                    سفارش‌های اخیر
+                                </span>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th>نام محصول</th>
+                                            <th>تاریخ</th>
+                                            <th>قیمت</th>
+                                            <th>وضعیت</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="product-cell">
+                                                    <img src="image/products/p-1.webp" alt="محصول"
+                                                        class="product-thumb">
+                                                    <span>گوشی موبایل اپل مدل iPhone 16</span>
+                                                </div>
+                                            </td>
+                                            <td>۱۴۰۲/۱۱/۱۱</td>
+                                            <td>۶۲,۰۰۰,۰۰۰ تومان</td>
+                                            <td><span class="status-badge canceled">لغو شده</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="product-cell">
+                                                    <img src="image/products/p-2.webp" alt="محصول"
+                                                        class="product-thumb">
+                                                    <span>گوشی موبایل اپل مدل iPhone 16</span>
+                                                </div>
+                                            </td>
+                                            <td>۱۴۰۲/۱۱/۱۱</td>
+                                            <td>۶۲,۰۰۰,۰۰۰ تومان</td>
+                                            <td><span class="status-badge pending">درانتظار پرداخت</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="product-cell">
+                                                    <img src="image/products/p-3.webp" alt="محصول"
+                                                        class="product-thumb">
+                                                    <span>گوشی موبایل اپل مدل iPhone 16</span>
+                                                </div>
+                                            </td>
+                                            <td>۱۴۰۲/۱۱/۱۱</td>
+                                            <td>۶۲,۰۰۰,۰۰۰ تومان</td>
+                                            <td><span class="status-badge completed">پرداخت شده</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- ===== Addresses ===== -->
+                        <div class="dashboard-card">
+                            <div class="card-header-custom">
+                                <span class="card-title">
+                                    <img src="image/svg/map.png" alt="" class="card-title-icon">
+                                    آدرس‌های من
+                                </span>
+                                <a href="#" class="add-address-btn">
+                                    <i class="fa-regular fa-plus"></i>
+                                    آدرس جدید
+                                </a>
+                            </div>
+
+                            <div class="address-list">
+                                <div class="address-item">
+                                    <div class="address-header">
+                                        <i class="fas fa-location-dot"></i>
+                                        <span class="address-name">نام آدرس</span>
+                                    </div>
+                                    <div class="address-details">
+                                        <p>استان تهران-بلوار آزادی، خیابان استاد معین، کوچه گلستان، پلاک ۱۰</p>
+                                        <p>کد پستی: ۰۰۰۰۰۰۰۰۰</p>
+                                        <p>گیرنده: ابوالفضل شکرشکن | ۰۹۰۰۰۰۰۰۰۰۰</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <img src="image/Sepidook-Blank-4.png.webp" alt="خرازی آنلاین" width="160px"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span style="display: none; font-size: 20px; font-weight: bold; color: var(--color-primary);">
+                        خرازی آنلاین
+                    </span>
+                </div>
+
+                <!-- Phone -->
+                <div class="footer-phone">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>09369834050</span>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="اینستاگرام">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="تلگرام">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="واتساپ">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="آپارات">
+                        <i class="fa-brands fa-aparat"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    تمامی حقوق مادی و معنوی این سایت متعلق به خرازی آنلاین می‌باشد.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div id="designer">
+        <span><a href=""> Powerd by Deigiseek</a></span>
+    </div>
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS Custom -->
+    <script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>
