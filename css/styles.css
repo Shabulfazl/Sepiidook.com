@@ -2529,8 +2529,8 @@ body, html {
 /* ===== Mega Menu Dropdown ===== */
 .mega-menu {
     position: absolute;
-    top: calc(100% + 12px);
-    right: 0;
+    top: calc(20% + 12px);
+    right: 50px;
     left: auto;
     min-width: 850px;
     max-width: 880px;
@@ -9708,7 +9708,14 @@ Product Details Page Styles
 .color-select-btn {
     width: 30px;
     height: 30px;
-    padding: 2px !important;
+    padding: 2px ;
+    border: 0;
+    outline: 0;
+}
+
+.color-select-btn:focus{
+    border: 0;
+    outline: 0;
 }
 
 .single-product-rating {
@@ -9725,4 +9732,60 @@ Product Details Page Styles
     font-size: 14px;
     transition: all 0.3s ease;
     flex-shrink: 0;
+}
+
+
+
+/*==== Cart Page Styles ====*/
+
+.text-primary { color: var(--color-primary) !important; }
+.text-accent { color: var(--color-accent) !important; }
+.text-muted { color: var(--color-text-muted) !important; }
+.border-dashed { border-top-style: dashed !important; border-color: var(--color-border) !important; }
+
+/* Custom Container / Card */
+.cart-box {
+    background-color: var(--color-white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+/* Primary Button Override */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-primary:focus {
+    box-shadow: var(--shadow-focus) !important;
+}
+
+/* Quantity Input */
+.quantity-control {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+.quantity-control input[type="number"]::-webkit-inner-spin-button,
+.quantity-control input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.quantity-control input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Product Item Transition */
+.add-to-next-btn {
+    transition: all 0.3s ease;
+}
+.add-to-next-btn:hover {
+    padding-right: 0.5rem; /* افکت حرکت به سمت فلش */
 }

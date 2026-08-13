@@ -25,7 +25,7 @@
 
 <body>
 <!-- Header -->
-<header class="site-header">
+<header class="site-header mb-3">
     <div class="container-fluid px-4 px-xl-5">
         <!-- Top header -->
         <div class="header-top">
@@ -212,192 +212,70 @@
             </div>
         </div>
 
-        <!-- Bottom nav -->
+        <!--  BOTTOM NAV - Mobile App Style  -->
         <div class="header-bottom">
             <div class="nav-shell">
-                <nav class="nav-menu" aria-label="Main navigation">
-                    <!-- ===== Mega Menu Trigger ===== -->
+                <!-- ناوبری موبایل -->
+                <nav class="mobile-nav" aria-label="Mobile navigation">
+                    <!-- آیتم ۱: خانه -->
+                    <input type="radio" name="mobileNav" id="nav-home" checked>
+                    <label for="nav-home" class="mobile-nav-item">
+                        <i class="fa-solid fa-house"></i>
+                        <span>خانه</span>
+                    </label>
+
+                    <!-- آیتم ۲: فروشگاه -->
+                    <input type="radio" name="mobileNav" id="nav-shop">
+                    <label for="nav-shop" class="mobile-nav-item">
+                        <i class="fa-solid fa-store"></i>
+                        <span>فروشگاه</span>
+                    </label>
+
+                    <!-- آیتم ۳: دسته‌بندی‌ها -->
+                    <input type="radio" name="mobileNav" id="nav-categories">
+                    <label for="nav-categories" class="mobile-nav-item" id="mobileMegaTrigger">
+                        <i class="fas fa-bars"></i>
+                        <span>دسته‌ها</span>
+                    </label>
+
+                    <!-- آیتم ۴: وبلاگ -->
+                    <input type="radio" name="mobileNav" id="nav-blog">
+                    <label for="nav-blog" class="mobile-nav-item">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span>وبلاگ</span>
+                    </label>
+
+                    <!-- آیتم ۵: بیشتر -->
+                    <input type="radio" name="mobileNav" id="nav-more">
+                    <label for="nav-more" class="mobile-nav-item">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <span>بیشتر</span>
+                    </label>
+
+                    <!-- Indicator متحرک -->
+                    <div class="nav-indicator"></div>
+                </nav>
+
+                <!-- منوی دسکتاپ (در موبایل مخفی) -->
+                <nav class="nav-menu desktop-nav" aria-label="Main navigation">
                     <div class="nav-item-mega">
                         <a href="#" class="nav-item-custom mega-trigger" id="megaTrigger">
                             <i class="fa-solid fa-bars"></i>
                             <span>دسته بندی محصولات</span>
                             <i class="fa-solid fa-chevron-down mega-arrow"></i>
                         </a>
-
-                        <!-- ===== Mega Menu Dropdown ===== -->
-                        <div class="mega-menu" id="megaMenu">
-                            <div class="mega-container">
-                                <!-- Close button (mobile) -->
-                                <button class="mega-close" id="megaClose">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
-
-                                <!-- ===== Flex Container: Swiper + Special Fixed ===== -->
-                                <div class="mega-flex-row">
-                                    <!-- Swiper Container -->
-                                    <div class="mega-swiper-wrapper">
-                                        <div class="swiper mega-swiper">
-                                            <div class="swiper-wrapper">
-                                                <!-- ===== Column 1: لباس و پوشاک ===== -->
-                                                <div class="swiper-slide">
-                                                    <div class="mega-col">
-                                                        <h4 class="mega-col-title">
-                                                            <i class="fa-solid fa-shirt"></i>
-                                                            لباس و پوشاک
-                                                        </h4>
-                                                        <ul class="mega-col-list">
-                                                            <li><a href="#">لباس زنانه</a></li>
-                                                            <li><a href="#">لباس مردانه</a></li>
-                                                            <li><a href="#">لباس کودک</a></li>
-                                                            <li><a href="#">لباس مجلسی</a></li>
-                                                            <li><a href="#">لباس ورزشی</a></li>
-                                                            <li><a href="#">لباس کار</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ===== Column 2: لوازم خیاطی ===== -->
-                                                <div class="swiper-slide">
-                                                    <div class="mega-col">
-                                                        <h4 class="mega-col-title">
-                                                            <i class="fa-solid fa-scissors"></i>
-                                                            لوازم خیاطی
-                                                        </h4>
-                                                        <ul class="mega-col-list">
-                                                            <li><a href="#">نخ و سوزن</a></li>
-                                                            <li><a href="#">قیچی و برش</a></li>
-                                                            <li><a href="#">متر و اندازه‌گیری</a></li>
-                                                            <li><a href="#">چرخ خیاطی</a></li>
-                                                            <li><a href="#">لوازم گلدوزی</a></li>
-                                                            <li><a href="#">پایه و میز خیاطی</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ===== Column 3: زیورآلات و تزئینات ===== -->
-                                                <div class="swiper-slide">
-                                                    <div class="mega-col">
-                                                        <h4 class="mega-col-title">
-                                                            <i class="fa-regular fa-gem"></i>
-                                                            زیورآلات و تزئینات
-                                                        </h4>
-                                                        <ul class="mega-col-list">
-                                                            <li><a href="#">دستبند و گردنبند</a></li>
-                                                            <li><a href="#">گوشواره و انگشتر</a></li>
-                                                            <li><a href="#">سنگ‌دوزی و نگین</a></li>
-                                                            <li><a href="#">کش و کلیپس مو</a></li>
-                                                            <li><a href="#">دکمه و پولک</a></li>
-                                                            <li><a href="#">مروارید و آب‌جواهر</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ===== Column 4: پارچه و متریال ===== -->
-                                                <div class="swiper-slide">
-                                                    <div class="mega-col">
-                                                        <h4 class="mega-col-title">
-                                                            <i class="fas fa-scroll"></i>
-                                                            پارچه و متریال
-                                                        </h4>
-                                                        <ul class="mega-col-list">
-                                                            <li><a href="#">پارچه زنانه</a></li>
-                                                            <li><a href="#">پارچه مردانه</a></li>
-                                                            <li><a href="#">پارچه ضخیم و نخی</a></li>
-                                                            <li><a href="#">پارچه حریر و نازک</a></li>
-                                                            <li><a href="#">چرم و جیر</a></li>
-                                                            <li><a href="#">پارچه طرح‌دار</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ===== Column 5: ابزار و یراق ===== -->
-                                                <div class="swiper-slide">
-                                                    <div class="mega-col">
-                                                        <h4 class="mega-col-title">
-                                                            <i class="fa-solid fa-toolbox"></i>
-                                                            ابزار و یراق
-                                                        </h4>
-                                                        <ul class="mega-col-list">
-                                                            <li><a href="#">ابزار اندازه‌گیری</a></li>
-                                                            <li><a href="#">یراق‌آلات</a></li>
-                                                            <li><a href="#">زیپ و دکمه</a></li>
-                                                            <li><a href="#">نخ و کاموا</a></li>
-                                                            <li><a href="#">ابزار گلدوزی</a></li>
-                                                            <li><a href="#">کیف و جعبه ابزار</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ===== Column 6: لوازم جانبی ===== -->
-                                                <div class="swiper-slide">
-                                                    <div class="mega-col">
-                                                        <h4 class="mega-col-title">
-                                                            <i class="fa-solid fa-bag-shopping"></i>
-                                                            لوازم جانبی
-                                                        </h4>
-                                                        <ul class="mega-col-list">
-                                                            <li><a href="#">کیف و کوله</a></li>
-                                                            <li><a href="#">کمربند</a></li>
-                                                            <li><a href="#">کلاه و شال</a></li>
-                                                            <li><a href="#">دستکش</a></li>
-                                                            <li><a href="#">جوراب</a></li>
-                                                            <li><a href="#">لوازم آرایشی</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Swiper Scrollbar -->
-                                            <div class="mega-scrollbar"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- ===== Special Offers - Fixed (در ردیف کروسل ولی خارج از آن) ===== -->
-                                    <div class="mega-special-fixed">
-                                        <div class="mega-special-box">
-                                            <div class="mega-special-icon">
-                                                <i class="fa-solid fa-bolt"></i>
-                                            </div>
-                                            <h4 class="mega-special-title">تخفیف‌های ویژه</h4>
-                                            <p class="mega-special-desc">تا ۵۰٪ تخفیف برای محصولات منتخب</p>
-                                            <a href="#" class="mega-special-link">
-                                                مشاهده همه
-                                                <i class="fa-solid fa-chevron-left"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
-                    <!-- Other nav items -->
-                    <a href="#" class="nav-item-custom">
-                        <i class="fa-regular fa-gem"></i>
-                        <span>فروشگاه</span>
-                    </a>
-                    <a href="#" class="nav-item-custom">
-                        <i class="fa-solid fa-percent"></i>
-                        <span>تخفیف ها</span>
-                    </a>
-                    <a href="#" class="nav-item-custom">
-                        <i class="fa-regular fa-pen-to-square"></i>
-                        <span>وبلاگ</span>
-                    </a>
-                    <a href="#" class="nav-item-custom">
-                        <i class="fa-regular fa-user"></i>
-                        <span>درباره ما</span>
-                    </a>
-                    <a href="#" class="nav-item-custom">
-                        <i class="fa-solid fa-address-book"></i>
-                        <span>تماس با ما</span>
-                    </a>
+                    <a href="#" class="nav-item-custom"><i class="fa-regular fa-gem"></i><span>فروشگاه</span></a>
+                    <a href="#" class="nav-item-custom"><i class="fa-solid fa-percent"></i><span>تخفیف ها</span></a>
+                    <a href="#" class="nav-item-custom"><i
+                            class="fa-regular fa-pen-to-square"></i><span>وبلاگ</span></a>
+                    <a href="#" class="nav-item-custom"><i class="fa-regular fa-user"></i><span>درباره ما</span></a>
+                    <a href="#" class="nav-item-custom"><i class="fa-solid fa-address-book"></i><span>تماس با ما</span></a>
                 </nav>
 
-                <!-- Support -->
+                <!-- Support (desktop only) -->
                 <div class="support-box">
-                    <div class="support-icon">
-                        <i class="fa-solid fa-phone-volume"></i>
-                    </div>
+                    <div class="support-icon"><i class="fa-solid fa-phone-volume"></i></div>
                     <div class="support-text">
                         <span class="label">پشتیبانی فروش</span>
                         <span class="phone">09369834050</span>
@@ -406,14 +284,122 @@
             </div>
         </div>
     </div>
+    <div class="mega-menu" id="megaMenu">
+        <div class="mega-container">
+            <button class="mega-close" id="megaClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mega-flex-row">
+                <div class="mega-swiper-wrapper">
+                    <div class="swiper mega-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fa-solid fa-shirt"></i>
+                                        لباس و پوشاک</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">لباس زنانه</a></li>
+                                        <li><a href="#">لباس مردانه</a></li>
+                                        <li><a href="#">لباس کودک</a></li>
+                                        <li><a href="#">لباس مجلسی</a></li>
+                                        <li><a href="#">لباس ورزشی</a></li>
+                                        <li><a href="#">لباس کار</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fa-solid fa-scissors"></i>
+                                        لوازم خیاطی</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">نخ و سوزن</a></li>
+                                        <li><a href="#">قیچی و برش</a></li>
+                                        <li><a href="#">متر و اندازه‌گیری</a></li>
+                                        <li><a href="#">چرخ خیاطی</a></li>
+                                        <li><a href="#">لوازم گلدوزی</a></li>
+                                        <li><a href="#">پایه و میز خیاطی</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fa-regular fa-gem"></i>
+                                        زیورآلات و تزئینات</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">دستبند و گردنبند</a></li>
+                                        <li><a href="#">گوشواره و انگشتر</a></li>
+                                        <li><a href="#">سنگ‌دوزی و نگین</a></li>
+                                        <li><a href="#">کش و کلیپس مو</a></li>
+                                        <li><a href="#">دکمه و پولک</a></li>
+                                        <li><a href="#">مروارید و آب‌جواهر</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fas fa-scroll"></i> پارچه و
+                                        متریال</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">پارچه زنانه</a></li>
+                                        <li><a href="#">پارچه مردانه</a></li>
+                                        <li><a href="#">پارچه ضخیم و نخی</a></li>
+                                        <li><a href="#">پارچه حریر و نازک</a></li>
+                                        <li><a href="#">چرم و جیر</a></li>
+                                        <li><a href="#">پارچه طرح‌دار</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i class="fa-solid fa-toolbox"></i>
+                                        ابزار و یراق</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">ابزار اندازه‌گیری</a></li>
+                                        <li><a href="#">یراق‌آلات</a></li>
+                                        <li><a href="#">زیپ و دکمه</a></li>
+                                        <li><a href="#">نخ و کاموا</a></li>
+                                        <li><a href="#">ابزار گلدوزی</a></li>
+                                        <li><a href="#">کیف و جعبه ابزار</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="mega-col">
+                                    <h4 class="mega-col-title"><i
+                                            class="fa-solid fa-bag-shopping"></i> لوازم جانبی</h4>
+                                    <ul class="mega-col-list">
+                                        <li><a href="#">کیف و کوله</a></li>
+                                        <li><a href="#">کمربند</a></li>
+                                        <li><a href="#">کلاه و شال</a></li>
+                                        <li><a href="#">دستکش</a></li>
+                                        <li><a href="#">جوراب</a></li>
+                                        <li><a href="#">لوازم آرایشی</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mega-scrollbar"></div>
+                    </div>
+                </div>
+                <div class="mega-special-fixed">
+                    <div class="mega-special-box">
+                        <div class="mega-special-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h4 class="mega-special-title">تخفیف‌های ویژه</h4>
+                        <p class="mega-special-desc">تا ۵۰٪ تخفیف برای محصولات منتخب</p>
+                        <a href="#" class="mega-special-link">مشاهده همه <i
+                                class="fa-solid fa-chevron-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </header>
 
 
 <!-- Main Content -->
 <main>
-    <!-- =========================================
-    PRODUCT DETAILS PAGE - صفحه جزییات محصول
-    ========================================= -->
+    <!-- ===== PRODUCT DETAILS PAGE  ===== -->
     <div class="product-details-page">
         <div class="container py-4">
 
@@ -517,7 +503,8 @@
 
                                     <!-- Titles & Review -->
                                     <div class="d-flex flex-column gap-2">
-                                        <h1 class="text-truncate h6 fw-bold mb-0 mt-4">گوشی موبایل اپل مدل iPhone 16 دو سیم
+                                        <h1 class="text-truncate h6 fw-bold mb-0 mt-4">گوشی موبایل اپل مدل iPhone 16 دو
+                                            سیم
                                             کارت
                                             ظرفیت 128 گیگابایت و رم 8</h1>
                                         <p class="mb-0" style="font-size: 12px; color: #d3d3d3;">Apple iPhone 16 CH Dual
@@ -560,6 +547,13 @@
                                             <button class="btn rounded-circle border border-1 border-secondary color-select-btn"
                                                     data-color="آبی">
                                                 <span class="d-block w-100 h-100 rounded-circle bg-primary"></span>
+                                            </button>
+                                            <button class="btn p-0 color-select-btn"
+                                                    data-color="آبی">
+                                                <div class="text-white bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center"
+                                                     style="width: 30px; height: 30px; z-index: 2;">
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
                                             </button>
                                         </div>
                                     </div>
@@ -645,8 +639,8 @@
             </section>
 
             <!-- PRODUCT SECTION -->
-            <div class="container py-4 mb-3">
-                <section class="product-section">
+            <section class="product-section py-4 mb-3">
+                <div class="container ">
                     <!-- Header -->
                     <div class="section-header">
                         <h2 class="section-title">
@@ -998,8 +992,8 @@
                         </div>
                     </div>
 
-                </section>
-            </div>
+                </div>
+            </section>
 
             <!-- TABS SECTION -->
             <section class="mt-5">
